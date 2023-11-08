@@ -391,7 +391,7 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
                 generateSpikePlatform(amountofspike_plat);
                 generateMovingPlatform(amountofmoving_plat);
                 generateJumpPlatform(amountofjump_plat);
-            } else if (score >= 100 && amoutofstatic_plat == 7 && amountofspike_plat == 3 && amountofmoving_plat == 2) {
+            } else if (score >= 100 && amoutofstatic_plat == 4 && amountofspike_plat == 3 && amountofmoving_plat == 2) {
                 System.out.println("station 6");
                 movingPlatforms.clear();
                 spikePlatforms.clear();
@@ -403,12 +403,12 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
                 amountofspike_plat = 3;
                 amountofmoving_plat = 2;
 
-                amountofjumpOnce_plat = 7;
+                amountofjumpOnce_plat = 6;
 
                 generateJumpOncePlatform(amountofjumpOnce_plat);
                 amoutofstatic_plat = 0;
 
-                amountofjump_plat = 2;
+                amountofjump_plat = 1;
 
                 generateSpikePlatform(amountofspike_plat);
                 generateMovingPlatform(amountofmoving_plat);
