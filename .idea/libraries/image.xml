@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="image">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/javaapplication4/image/Pixel Adventure 2.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/javaapplication4/image/animated_spikes.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/javaapplication4/image/free-sky-with-clouds-background-pixel-art-set.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
