@@ -38,7 +38,7 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
     BufferedImage skyBackground, cloud1, cloud2, star, skyBackground_1, cloud1_1, cloud2_1, star_1, skyBackground_2, cloud1_2, cloud2_2, star_2, skyBackground_3, cloud1_3, cloud2_3, star_3, skyBackground_4, cloud1_4, cloud2_4, star_4, skyBackground_5, cloud1_5, cloud2_5, star_5;
 
     BufferedImage rabImage;
-    
+
     Sound sound = new Sound();
     int spriteCounter = 0;
     int spriteNum = 1;
@@ -96,19 +96,19 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
     public void getRabbitImage() {
         try {
 
-            up1 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\jump1.png"));
-            up2 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\jump2.png"));
-            up3 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\jump3.png"));
-            fall1 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Fall1.png"));
-            fall2 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Fall2.png"));
-            fall3 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Fall3.png"));
+            up1 = ImageIO.read(this.getClass().getResource("image/Jump1.png"));
+            up2 = ImageIO.read(this.getClass().getResource("image/jump2.png"));
+            up3 = ImageIO.read(this.getClass().getResource("image/jump3.png"));
+            fall1 = ImageIO.read(this.getClass().getResource("image/Fall1.png"));
+            fall2 = ImageIO.read(this.getClass().getResource("image/Fall2.png"));
+            fall3 = ImageIO.read(this.getClass().getResource("image/Fall3.png"));
 
-            Rup1 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Rjump1.png"));
-            Rup2 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Rjump2.png"));
-            Rup3 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Rjump3.png"));
-            Rfall1 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\RFall1.png"));
-            Rfall2 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\RFall2.png"));
-            Rfall3 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\RFall3.png"));
+            Rup1 = ImageIO.read(this.getClass().getResource("image/RJump1.png"));
+            Rup2 = ImageIO.read(this.getClass().getResource("image/Rjump2.png"));
+            Rup3 = ImageIO.read(this.getClass().getResource("image/Rjump3.png"));
+            Rfall1 = ImageIO.read(this.getClass().getResource("image/RFall1.png"));
+            Rfall2 = ImageIO.read(this.getClass().getResource("image/RFall2.png"));
+            Rfall3 = ImageIO.read(this.getClass().getResource("image/RFall3.png"));
         } catch (IOException e) {
 
             e.printStackTrace();
@@ -143,82 +143,80 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
         try {
 
             view = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
-            rabImage = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\jump2.png"));
+//            rabImage = ImageIO.read(new File("src/javaapplication4/image/jump2.png"));
+            rabImage = ImageIO.read(this.getClass().getResource("image/jump2.png"));
 
-            File plat_path = new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\platform.png");
-            File moveplat_path = new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\moveplatform.png");
+            skyBackground = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 1/1.png"));
+            cloud1 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 1/2.png"));
+            cloud2 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 1/3.png"));
+            star = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 1/4.png"));
 
-            skyBackground = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 1\\1.png"));
-            cloud1 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 1\\2.png"));
-            cloud2 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 1\\3.png"));
-            star = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 1\\4.png"));
+            skyBackground_1 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 2/1.png"));
+            cloud1_1 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 2/2.png"));
+            cloud2_1 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 2/3.png"));
+            star_1 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 2/4.png"));
 
-            skyBackground_1 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 2\\1.png"));
-            cloud1_1 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 2\\2.png"));
-            cloud2_1 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 2\\3.png"));
-            star_1 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 2\\4.png"));
+            skyBackground_2 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 5/1.png"));
+            cloud1_2 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 5/2.png"));
+            cloud2_2 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 5/3.png"));
+            star_2 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 5/4.png"));
 
-            skyBackground_2 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 5\\1.png"));
-            cloud1_2 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 5\\2.png"));
-            cloud2_2 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 5\\3.png"));
-            star_2 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 5\\4.png"));
+            skyBackground_3 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 8/1.png"));
+            cloud1_3 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 8/2.png"));
+            cloud2_3 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 8/3.png"));
+            star_3 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 8/4.png"));
 
-            skyBackground_3 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 8\\1.png"));
-            cloud1_3 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 8\\2.png"));
-            cloud2_3 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 8\\3.png"));
-            star_3 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 8\\4.png"));
+            skyBackground_4 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 4/1.png"));
+            cloud1_4 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 4/2.png"));
+            cloud2_4 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 4/3.png"));
+            star_4 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 4/4.png"));
 
-            skyBackground_4 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 4\\1.png"));
-            cloud1_4 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 4\\2.png"));
-            cloud2_4 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 4\\3.png"));
-            star_4 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 4\\4.png"));
+            skyBackground_5 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 3/1.png"));
+            cloud1_5 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 3/2.png"));
+            cloud2_5 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 3/3.png"));
+            star_5 = ImageIO.read(this.getClass().getResource("image/Clouds/Clouds 3/4.png"));
 
-            skyBackground_5 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 3\\1.png"));
-            cloud1_5 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 3\\2.png"));
-            cloud2_5 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 3\\3.png"));
-            star_5 = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Clouds\\Clouds 3\\4.png"));
+            platform = ImageIO.read(this.getClass().getResource("/javaapplication4/image/platform.png"));
+            moveplatform = ImageIO.read(this.getClass().getResource("/javaapplication4/image/moveplatform.png"));
 
-            platform = ImageIO.read(plat_path);
-            moveplatform = ImageIO.read(moveplat_path);
+//            jumpplatform = ImageIO.read(this.getClass().getResource("image/jumpplatform.png"));
+            jumpPlatformFrames[0] = ImageIO.read(this.getClass().getResource("image/jumpplatform.png"));
+            jumpPlatformFrames[1] = ImageIO.read(this.getClass().getResource("image/jumpplatform2.png"));
+            jumpPlatformFrames[2] = ImageIO.read(this.getClass().getResource("image/jumpplatform3.png"));
 
-//            jumpplatform = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\jumpplatform.png"));
-            jumpPlatformFrames[0] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\jumpplatform.png"));
-            jumpPlatformFrames[1] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\jumpplatform2.png"));
-            jumpPlatformFrames[2] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\jumpplatform3.png"));
+//            spikeplatform = ImageIO.read(this.getClass().getResource("image/pngs/unavoidable_roller/unavoidable_spikes_just_roller_01.png"));
+            spikePlatformFrames[0] = ImageIO.read(this.getClass().getResource("image/pngs/unavoidable_roller/unavoidable_spikes_just_roller_01.png"));
+            spikePlatformFrames[1] = ImageIO.read(this.getClass().getResource("image/pngs/unavoidable_roller/unavoidable_spikes_just_roller_02.png"));
+            spikePlatformFrames[2] = ImageIO.read(this.getClass().getResource("image/pngs/unavoidable_roller/unavoidable_spikes_just_roller_03.png"));
+            spikePlatformFrames[3] = ImageIO.read(this.getClass().getResource("image/pngs/unavoidable_roller/unavoidable_spikes_just_roller_04.png"));
+            spikePlatformFrames[4] = ImageIO.read(this.getClass().getResource("image/pngs/unavoidable_roller/unavoidable_spikes_just_roller_05.png"));
+            spikePlatformFrames[5] = ImageIO.read(this.getClass().getResource("image/pngs/unavoidable_roller/unavoidable_spikes_just_roller_06.png"));
+            spikePlatformFrames[6] = ImageIO.read(this.getClass().getResource("image/pngs/unavoidable_roller/unavoidable_spikes_just_roller_07.png"));
+            spikePlatformFrames[7] = ImageIO.read(this.getClass().getResource("image/pngs/unavoidable_roller/unavoidable_spikes_just_roller_08.png"));
+            spikePlatformFrames[8] = ImageIO.read(this.getClass().getResource("image/pngs/unavoidable_roller/unavoidable_spikes_just_roller_09.png"));
+            spikePlatformFrames[9] = ImageIO.read(this.getClass().getResource("image/pngs/unavoidable_roller/unavoidable_spikes_just_roller_10.png"));
 
-//            spikeplatform = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\pngs\\unavoidable_roller\\unavoidable_spikes_just_roller_01.png"));
-            spikePlatformFrames[0] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\pngs\\unavoidable_roller\\unavoidable_spikes_just_roller_01.png"));
-            spikePlatformFrames[1] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\pngs\\unavoidable_roller\\unavoidable_spikes_just_roller_02.png"));
-            spikePlatformFrames[2] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\pngs\\unavoidable_roller\\unavoidable_spikes_just_roller_03.png"));
-            spikePlatformFrames[3] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\pngs\\unavoidable_roller\\unavoidable_spikes_just_roller_04.png"));
-            spikePlatformFrames[4] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\pngs\\unavoidable_roller\\unavoidable_spikes_just_roller_05.png"));
-            spikePlatformFrames[5] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\pngs\\unavoidable_roller\\unavoidable_spikes_just_roller_06.png"));
-            spikePlatformFrames[6] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\pngs\\unavoidable_roller\\unavoidable_spikes_just_roller_07.png"));
-            spikePlatformFrames[7] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\pngs\\unavoidable_roller\\unavoidable_spikes_just_roller_08.png"));
-            spikePlatformFrames[8] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\pngs\\unavoidable_roller\\unavoidable_spikes_just_roller_09.png"));
-            spikePlatformFrames[9] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\pngs\\unavoidable_roller\\unavoidable_spikes_just_roller_10.png"));
+            birdFrames[0] = ImageIO.read(this.getClass().getResource("image/bird1.png"));
+            birdFrames[1] = ImageIO.read(this.getClass().getResource("image/bird2.png"));
+            birdFrames[2] = ImageIO.read(this.getClass().getResource("image/bird3.png"));
+            birdFrames[3] = ImageIO.read(this.getClass().getResource("image/bird4.png"));
+            birdFrames[4] = ImageIO.read(this.getClass().getResource("image/bird5.png"));
+            birdFrames[5] = ImageIO.read(this.getClass().getResource("image/bird6.png"));
+            birdFrames[6] = ImageIO.read(this.getClass().getResource("image/bird7.png"));
+            birdFrames[7] = ImageIO.read(this.getClass().getResource("image/bird8.png"));
+            birdFrames[8] = ImageIO.read(this.getClass().getResource("image/bird9.png"));
 
-            birdFrames[0] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\bird1.png"));
-            birdFrames[1] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\bird2.png"));
-            birdFrames[2] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\bird3.png"));
-            birdFrames[3] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\bird4.png"));
-            birdFrames[4] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\bird5.png"));
-            birdFrames[5] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\bird6.png"));
-            birdFrames[6] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\bird7.png"));
-            birdFrames[7] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\bird8.png"));
-            birdFrames[8] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\bird9.png"));
+            RbirdFrames[0] = ImageIO.read(this.getClass().getResource("image/Rbird1.png"));
+            RbirdFrames[1] = ImageIO.read(this.getClass().getResource("image/Rbird2.png"));
+            RbirdFrames[2] = ImageIO.read(this.getClass().getResource("image/Rbird3.png"));
+            RbirdFrames[3] = ImageIO.read(this.getClass().getResource("image/Rbird4.png"));
+            RbirdFrames[4] = ImageIO.read(this.getClass().getResource("image/Rbird5.png"));
+            RbirdFrames[5] = ImageIO.read(this.getClass().getResource("image/Rbird6.png"));
+            RbirdFrames[6] = ImageIO.read(this.getClass().getResource("image/Rbird7.png"));
+            RbirdFrames[7] = ImageIO.read(this.getClass().getResource("image/Rbird8.png"));
+            RbirdFrames[8] = ImageIO.read(this.getClass().getResource("image/Rbird9.png"));
 
-            RbirdFrames[0] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Rbird1.png"));
-            RbirdFrames[1] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Rbird2.png"));
-            RbirdFrames[2] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Rbird3.png"));
-            RbirdFrames[3] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Rbird4.png"));
-            RbirdFrames[4] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Rbird5.png"));
-            RbirdFrames[5] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Rbird6.png"));
-            RbirdFrames[6] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Rbird7.png"));
-            RbirdFrames[7] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Rbird8.png"));
-            RbirdFrames[8] = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\Rbird9.png"));
-
-            jumponceplatform = ImageIO.read(new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\jump_once.png"));
+            jumponceplatform = ImageIO.read(this.getClass().getResource("image/jump_once.png"));
             platformposition = new PlatformPosition[20];
 
             generateBird(amountofbird);
@@ -236,10 +234,10 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
 
     public void generateBird(int amount) {
         for (int i = 0; i < amount; i++) {
-            BirdObstacle Platform1 = new BirdObstacle(new Random().nextInt(0,2), new Random().nextInt(10), birdFrames, RbirdFrames);
-            
+            BirdObstacle Platform1 = new BirdObstacle(new Random().nextInt(0, 2), new Random().nextInt(10), birdFrames, RbirdFrames);
+
             bird.add(Platform1);
-            
+
             playEffect(3);
 
         }
@@ -288,18 +286,17 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
             spikePlatforms.add(spikePlatform1);
         }
     }
-    
+
     public int finalscore = 0;
 
     public void update() {
 
         if (y > 500) {
-            
+
             GameState = GameOverState;
             playEffect(4);
             setDefault();
-            
-            
+
         } else if (GameState == GamePauseState || GameState == GameTitleState || GameState == GameOverState) {
 
             //do nothing
@@ -539,22 +536,20 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
                 }
 
             }
-            
 
             for (BirdObstacle platform : bird) {
                 platform.update();
                 platform.x += platform.birdspeed;
-                
 
                 if (platform.x > WIDTH || platform.x < -20) {
                     platform.birdspeed = -platform.birdspeed;
                     platform.isMovingRight = !platform.isMovingRight;
                 }
-                 if (platform.birdspeed > 0) {
-                        platform.isMovingRight = true;
-                    } else {
-                        platform.isMovingRight = false;
-                    }
+                if (platform.birdspeed > 0) {
+                    platform.isMovingRight = true;
+                } else {
+                    platform.isMovingRight = false;
+                }
 
                 int rabbitRight = x + 40;
                 int rabbitLeft = x + 40;
@@ -673,52 +668,45 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
             for (int i = 0; i < amoutofstatic_plat; i++) {
                 if (x + 50 > platformposition[i].x && x + 20 < platformposition[i].x + 68
                         && y + 70 > platformposition[i].y && y + 70 < platformposition[i].y + 14 && dy > 0) {
-                    
-                    
+
                     dy = -11;
-                    
+
                     playEffect(0);
-                    
-                    
-                if (!platformposition[i].platformUsed) {
 
-                    score += 1;
-                    System.out.println(score);
-                    platformposition[i].platformUsed = true;
+                    if (!platformposition[i].platformUsed) {
 
-                }
-                
-                
+                        score += 1;
+                        System.out.println(score);
+                        platformposition[i].platformUsed = true;
+
+                    }
+
                 }
             }
 
         }
 
     }
-    
-    public void playEffect(int i){
+
+    public void playEffect(int i) {
         sound.setFile(i);
         sound.play();
         sound.setVolume(-30f);
     }
-    
-    public int getxforCenteredText(String text , Graphics2D g2){
-    
-        int length = (int)g2.getFontMetrics().getStringBounds(text, g2).getWidth();
-        int x = WIDTH/2 - length/2;
+
+    public int getxforCenteredText(String text, Graphics2D g2) {
+
+        int length = (int) g2.getFontMetrics().getStringBounds(text, g2).getWidth();
+        int x = WIDTH / 2 - length / 2;
         return x;
     }
-    
-    
-    
-    
 
     public void draw() {
 
         Graphics2D g2 = (Graphics2D) view.getGraphics();
 
         if (GameState == GameOverState) {
-            
+
             g2.setColor(new Color(0, 0, 0, 10));
             g2.fillRect(0, 0, WIDTH, HEIGHT);
 
@@ -737,12 +725,12 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
             g2.drawString(text, x, y);
 
             g2.setColor(Color.WHITE);
-            g2.drawString(text,getxforCenteredText(text, g2), y - 4);
-            
+            g2.drawString(text, getxforCenteredText(text, g2), y - 4);
+
             g2.setFont(g2.getFont().deriveFont(25f));
             x = (WIDTH / 3) + 40;
             y += 50;
-            g2.drawString("You got : "+score+" score!!", getxforCenteredText("You got : "+score+" score!!", g2), y - 4);
+            g2.drawString("You got : " + score + " score!!", getxforCenteredText("You got : " + score + " score!!", g2), y - 4);
 
             //retry
             g2.setFont(g2.getFont().deriveFont(20f));
@@ -750,7 +738,6 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
             x = (WIDTH / 3) + 40;
             y += 50;
             g2.drawString(text, getxforCenteredText(text, g2), y);
-            
 
             if (commandNum == 0) {
                 g2.drawString(">", x - 40, y);
@@ -825,7 +812,6 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
             }
 
         } else {
-            
 
             if (score >= 0 && score < 25) {
                 g2.drawImage(skyBackground, 0, 0, WIDTH, HEIGHT, null);
@@ -932,7 +918,7 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
 
             for (BirdObstacle platform : bird) {
                 if (platform.isMovingRight) {
-                    g2.drawImage(platform.getCurrentRFrame(), platform.x, platform.y, 40,30, null);
+                    g2.drawImage(platform.getCurrentRFrame(), platform.x, platform.y, 40, 30, null);
                 } else {
                     g2.drawImage(platform.getCurrentFrame(), platform.x, platform.y, 40, 30, null);
                 }
@@ -942,7 +928,7 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
 
                 g2.drawImage(jumponceplatform, platform.x, platform.y, 70, 20, null);
             }
-            
+
             g2.setColor(Color.white);
             g2.setFont(g2.getFont().deriveFont(Font.BOLD, 20f));
             g2.drawString("Score: " + score, 20, 20);
@@ -1026,7 +1012,7 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
 
                 if (commandNum == 0) {
                     GameState = GamePlayState;
-                    score =0;
+                    score = 0;
                     setDefault();
                     start();
 
@@ -1038,9 +1024,7 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
                 }
             }
 
-        } 
-        
-        else if (GameState == GameTitleState) {
+        } else if (GameState == GameTitleState) {
             if (e.getKeyCode() == KeyEvent.VK_W) {
                 commandNum--;
                 if (commandNum < 0) {
@@ -1067,9 +1051,7 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
                 }
             }
 
-        }
-        
-        else {
+        } else {
 
             if (e.getKeyCode() == KeyEvent.VK_D) {
                 right = true;

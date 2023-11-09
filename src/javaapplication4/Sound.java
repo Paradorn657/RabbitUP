@@ -17,21 +17,22 @@ import javax.sound.sampled.*;
 public class Sound {
 
     Clip clip;
-    File soundURL[] = new File[1000];
+    URL soundURL[] = new URL[1000];
 
     public Sound() {
 
-        soundURL[0] = new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\sound\\jump1.wav");
-        soundURL[1] = new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\sound\\ouch.wav");
-        soundURL[2] = new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\sound\\spring.wav");
-        soundURL[3] = new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\sound\\hawk.wav");
-        soundURL[4] = new File("C:\\Users\\AVI03\\Desktop\\minigame\\JavaApplication4\\src\\javaapplication4\\image\\sound\\fall.wav");
-        
+        soundURL[0] = this.getClass().getResource("image/sound/jump1.wav");
+        soundURL[1] = this.getClass().getResource("image/sound/ouch.wav");
+        soundURL[2] = this.getClass().getResource("image/sound/spring.wav");
+        soundURL[3] = this.getClass().getResource("image/sound/hawk.wav");
+        soundURL[4] = this.getClass().getResource("image/sound/fall.wav");
+
     }
 
     public void setFile(int i) {
 
         try {
+            
             AudioInputStream ais = AudioSystem.getAudioInputStream(soundURL[i]);
 
             clip = AudioSystem.getClip();
