@@ -333,12 +333,15 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
 
                 amountofspike_plat = 2;
                 amountofmoving_plat = 3;
+                
+                 amountofjump_plat = 2;
 
                 amountofjumpOnce_plat = 3;
 
                 generateJumpOncePlatform(amountofjumpOnce_plat);
-
+                    
                 amoutofstatic_plat = 6;
+                generateJumpPlatform(amountofjump_plat);
 
                 generateSpikePlatform(amountofspike_plat);
                 generateMovingPlatform(amountofmoving_plat);
@@ -353,18 +356,19 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
                 generateBird(1);
 
                 amountofspike_plat = 2;
-                amountofmoving_plat = 3;
+                amountofmoving_plat = 2;
 
-                amountofjumpOnce_plat = 4;
+                amountofjumpOnce_plat = 5;
 
                 generateJumpOncePlatform(amountofjumpOnce_plat);
 
-                amoutofstatic_plat = 5;
+                amoutofstatic_plat = 3;
 
                 generateSpikePlatform(amountofspike_plat);
+                generateJumpPlatform(amountofjump_plat);
                 generateMovingPlatform(amountofmoving_plat);
 
-            } else if (score >= 80 && score < 100 && amoutofstatic_plat == 5 && amountofspike_plat == 2 && amountofmoving_plat == 3) {
+            } else if (score >= 80 && score < 100 && amoutofstatic_plat == 3 && amountofspike_plat == 2 && amountofmoving_plat == 2) {
 
                 System.out.println("station 5");
                 movingPlatforms.clear();
@@ -405,7 +409,7 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
                 generateJumpOncePlatform(amountofjumpOnce_plat);
                 amoutofstatic_plat = 0;
 
-                amountofjump_plat = 1;
+                amountofjump_plat = 2;
 
                 generateSpikePlatform(amountofspike_plat);
                 generateMovingPlatform(amountofmoving_plat);
@@ -1020,6 +1024,7 @@ public class Rabbitup extends JPanel implements Runnable, KeyListener {
                     System.out.println("Enter");
                     GameState = GameTitleState;
                     System.out.println(GameState);
+                    score = 0;
                     setDefault();
                 }
             }
